@@ -30,8 +30,9 @@ public class Act1 {
     
     public static void printList(List l){
         //System.out.println("Start");
-        for(Object o:l){
-            System.out.println(o);
+        for(int i = 0;i<l.size();i++){
+            
+            System.out.println((String)l.get(i));
         }
         //System.out.println("End");
         System.out.println("");
