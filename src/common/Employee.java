@@ -1,8 +1,9 @@
 package common;
 
 import java.util.*;
+import org.apache.commons.lang3.builder.CompareToBuilder;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
     private String lastName;
     private String firstName;
     private String ssn;
@@ -71,6 +72,13 @@ public class Employee {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    @Override
+    public int compareTo(Employee in) {
+        return new CompareToBuilder()
+                .append(getLastName(), in.getLastName())
+                .toComparison();
     }
 
 
