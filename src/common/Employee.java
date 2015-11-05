@@ -78,6 +78,8 @@ public class Employee implements Comparable<Employee>{
     public int compareTo(Employee in) {
         return new CompareToBuilder()
                 .append(getLastName(), in.getLastName())
+                .append(getFirstName(), in.getFirstName())
+                .append(getSsn(), in.getSsn())
                 .toComparison();
     }
 
